@@ -1,7 +1,7 @@
 const { Client, Intents, MessageEmbed } = require('discord.js');
 const fs = require('fs');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
-const token = process.env.TOKEN;
+
 
 const prefix = '!';
 const matches = {};
@@ -507,5 +507,5 @@ client.on('messageCreate', async message => {
 
 });
 
-client.login(TOKEN);
+client.login(process.env.token);
 
